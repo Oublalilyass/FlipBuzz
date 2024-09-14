@@ -1,0 +1,382 @@
+:root {
+    /* Primary Colors */
+    --primary-dark-blue: #1B2D5C;
+    --primary-vibrant-blue: #437BFF;
+    --primary-bright-orange: #FF7A2D;
+    --primary-deep-orange: #F16121;
+    --white: #FFFFFF;
+
+    /* UI Colors */
+    --background-color: var(--primary-dark-blue);
+    --button-bg: var(--primary-bright-orange);
+    --button-hover-bg: var(--primary-deep-orange);
+    --text-color: var(--white);
+}
+/* General Styles */
+.listing-container {
+    /* font-family: Arial, sans-serif; */
+    font-family: 'Lora', serif;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-width: 900px;
+    margin: 20px auto;
+    color: var(--text-color);
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--primary-vibrant-blue);
+}
+
+.description {
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: var(--primary-dark-blue);
+}
+
+.listing-header {
+    margin-bottom: 20px;
+}
+
+.listing-type {
+    color: var(--primary-bright-orange);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 10px 0;
+    color: var(--primary-bright-orange);
+    /* font-size: 28px;
+    font-weight: 700;
+    margin: 10px 0; */
+}
+
+p {
+    font-family: 'Lora', serif;
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.listing-tags {
+    margin: 10px 0;
+}
+
+.tag {
+    background-color: var(--primary-deep-orange);
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    display: inline-block;
+    color: var(--white);
+}
+
+.tag.confidential {
+    background-color: var(--primary-vibrant-blue);
+}
+
+/* Listing Details */
+.listing-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    color: var(--white);
+    margin-bottom: 30px;
+}
+
+.detail-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.detail-title {
+    font-weight: bold;
+    color: var(--primary-bright-orange);
+    font-size: 12px;
+}
+
+.detail-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-dark-blue);
+}
+
+/* Dark Mode */
+.bg-white.dark\:bg-white-800 {
+    background-color: var(--primary-dark-blue);
+    color: var(--white);
+}
+
+/* Modal Styles */
+.deleteModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-gray-600 {
+    backdrop-filter: blur(5px);
+}
+
+/* Button Hover Effect */
+button {
+    transition: background-color 0.3s ease;
+}
+
+.listing-image {
+    margin: 50px;
+    width: 80%; /* Make the image take up the full width of the container */
+    height: auto; /* Keep aspect ratio */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.bids-section {
+    background-color: var(--background-color); /* Using your dark blue background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.bids-header {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-color); /* White text color */
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.no-bids-text {
+    color: #ccc; /* A lighter gray to indicate no bids */
+    font-size: 1.1rem;
+}
+
+.bids-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bid-item {
+    background-color: var(--white); /* White background for individual bid items */
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.bid-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slight hover shadow */
+}
+
+.bid-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.bid-user {
+    font-weight: 600;
+    color: var(--primary-vibrant-blue); /* Vibrant blue for user name */
+    font-size: 1.1rem;
+}
+
+.bid-amount {
+    font-size: 1.25rem;
+    color: var(--primary-bright-orange); /* Bright orange for bid amount */
+}
+
+.bid-amount strong {
+    font-weight: 700;
+}
+
+.bid-date {
+    font-size: 0.9rem;
+    color: #888; /* Neutral gray for date */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bid-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .bid-user, .bid-amount, .bid-date {
+        margin-bottom: 8px;
+    }
+}
+
+/***************************** Footer button ****************************/
+
+/* Button Styling */
+.bidding-btn, .edit-details, .btn-danger, .view-details {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    width: 150px; /* Ensure uniform button width */
+    text-align: center; /* Center text within buttons */
+}
+ .view-details {
+    margin-right: 18px; /* Adds space to the right */
+}
+
+/* Remove margin from the last button */
+.listing-footer .btn-danger {
+    margin-right: 0;
+}
+
+/* Style for Delete button (orange) */
+.bidding-btn {
+    color: #FF7A2D; /* Red text */
+    background-color: var(--white); /* White background */
+    border: 2px solid #FF7A2D; /* Red border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bidding-btn:hover {
+    background-color: #FF7A2D; /* Red background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Style for Edit button (Blue) */
+.edit-details {
+    color: var(--primary-vibrant-blue); /* Vibrant blue text */
+    background-color: var(--white); /* White background */
+    border: 2px solid var(--primary-vibrant-blue); /* Blue border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-details:hover {
+    background-color: var(--primary-vibrant-blue); /* Blue background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Style for View button (Green) */
+.view-details {
+    color: #4CAF50; /* Green text */
+    background-color: var(--white); /* White background */
+    border: 2px solid #4CAF50; /* Green border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-details:hover {
+    background-color: #4CAF50; /* Green background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Style for Delete button (Red) */
+.btn-danger {
+    color: #F44336; /* Red text */
+    background-color: var(--white); /* White background */
+    border: 2px solid #F44336; /* Red border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #F44336; /* Red background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .listing-footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bidding-btn, .edit-details,.view-details {
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+    .btn-danger{
+        width: 260px; 
+        margin-right: 0;
+    }
+}
+/***********************************************/
+
+/* Button Styling */
+.cancel-btn, .submit-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    border: none;
+}
+.cancel-btn  {
+    color: #6B7280; /* Red text */
+    background-color: var(--white); /* White background */
+    border: 2px solid #6B7280; /* Red border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #4B5563; /* Red background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Submit Button (Blue) */
+.submit-btn  {
+    color: #2563EB; /* Red text */
+    background-color: var(--white); /* White background */
+    border: 2px solid #2563EB; /* Red border */
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #2563EB; /* Red background on hover */
+    color: var(--white); /* White text on hover */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .cancel-btn, .submit-btn {
+        width: 100%;
+        margin-bottom: 10px; /* Add spacing between buttons for mobile */
+    }
+}
