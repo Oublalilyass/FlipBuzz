@@ -1,9 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\BusinessDetailController;
 use App\Http\Controllers\BidController;
+use App\Http\Controllers\NotificationController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,3 +44,7 @@ Route::post('/business-details', [BusinessDetailController::class, 'store']);
 
 Route::post('/listings/{listing}/bids', [BidController::class, 'store'])->name('bids.store');
 Route::get('/listings/{listing}/bids', [BidController::class, 'index'])->name('bids.index');
+
+Route::get('/mark-as-read', [NotificationController::class, 'markAsRead'])->name('mark-as-read');
+
+Route::get('/notifications', [NotificationController::class, 'index'])->middleware('auth');

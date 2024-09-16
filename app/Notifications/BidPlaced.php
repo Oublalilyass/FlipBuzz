@@ -52,7 +52,7 @@ class BidPlaced extends Notification
     {
         return [
             'listing_id' => $this->bid->listing->id,
-            'bid_amount' => $this->bid->bid_amount,
+            'bid_amount' => $this->bid->amount,
             'bidder_id' => $this->bid->user->id,
         ];
     }
