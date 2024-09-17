@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Bid;
+use App\Http\Requests\ListingRequest;
 
 
 class ListingController extends Controller
@@ -48,21 +49,10 @@ class ListingController extends Controller
      * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request)
+    public function store(ListingRequest $request)
     {
         // Validate the incoming request
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'required|string',
-            'type' => 'required|string|max:255',
-            'site_age' => 'required|integer|min:0',
-            'monthly_profit' => 'required|numeric|min:0',
-            'profit_margin' => 'required|numeric|min:0',
-            'page_views' => 'required|integer|min:0',
-            'profit_multiple' => 'required|numeric|min:0',
-            'revenue_multiple' => 'required|numeric|min:0',
-            'images' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Image validation
-        ]);
+        $validated = $request->all();
     
         // Handle image upload
         if ($request->hasFile('images')) {
@@ -127,24 +117,13 @@ class ListingController extends Controller
      * @param int $id
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function update(Request $request, Listing $listing)
+    public function update(ListingRequest $request, Listing $listing)
 {
     // Authorization check
     $this->authorize('update', $listing);
 
     // Validate the incoming request
-    $validated = $request->validate([
-        'title' => 'required|string|max:255',
-        'description' => 'required|string',
-        'type' => 'required|string|max:255',
-        'site_age' => 'required|integer|min:0',
-        'monthly_profit' => 'required|numeric|min:0',
-        'profit_margin' => 'required|numeric|min:0',
-        'page_views' => 'required|integer|min:0',
-        'profit_multiple' => 'required|numeric|min:0',
-        'revenue_multiple' => 'required|numeric|min:0',
-        'images' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048', // Image validation
-    ]);
+    $validated = $request->all();
     // Handle image upload
     if ($request->hasFile('images')) {
         // Check if the file was uploaded successfully
