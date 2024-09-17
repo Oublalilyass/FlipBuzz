@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BusinessRequest;
 use Illuminate\Http\Request;
 use App\Models\BusinessDetail;
 
@@ -13,22 +14,10 @@ class BusinessDetailController extends Controller
         return BusinessDetail::all();
     }
 
-    public function store(Request $request)
+    public function store(BusinessRequest $request)
     {
         // Validate and create a new business detail
-        $validated = $request->validate([
-            'listing_id' => 'required|exists:listings,id',
-            'about_the_business' => 'nullable|string',
-            'comparisons_benchmarking' => 'nullable|string',
-            'revenue_expenses' => 'nullable|array',
-            'performance_data' => 'nullable|array',
-            'google_analytics_data' => 'nullable|array',
-            'monetization_methods' => 'nullable|string',
-            'products_services_used' => 'nullable|string',
-            'sale_includes' => 'nullable|string',
-            'social_media' => 'nullable|string',
-            'attachments' => 'nullable|array'
-        ]);
+        $validated = $request->all();
 
         return BusinessDetail::create($validated);
     }
