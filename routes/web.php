@@ -45,6 +45,7 @@ Route::post('/business-details', [BusinessDetailController::class, 'store']);
 Route::post('/listings/{listing}/bids', [BidController::class, 'store'])->name('bids.store');
 Route::get('/listings/{listing}/bids', [BidController::class, 'index'])->name('bids.index');
 
-Route::get('/mark-as-read', [NotificationController::class, 'markAsRead'])->name('mark-as-read');
-
-Route::get('/notifications', [NotificationController::class, 'index'])->middleware('auth');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/notifications', [NotificationController::class, 'showNotifications'])->name('notifications.index');
+    Route::post('/notifications/mark-as-read', [NotificationController::class, 'markAsRead'])->name('notifications.markAsRead');
+});

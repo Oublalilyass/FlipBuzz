@@ -56,9 +56,11 @@ class BidController extends Controller
 
     public function show($id)
     {
-    $listing = Listing::findOrFail($id);
-    $userBid = Bid::where('user_id', Auth::id())->where('listing_id', $id)->first();
-    dd($userBid);
-    return view('listings.show', compact('listing', 'userBid'));
+        $listing = Listing::findOrFail($id);
+        $userBid = Bid::where('user_id', Auth::id())
+                       ->where('listing_id', $id)
+                       ->first();
+
+        return view('listings.show', compact('listing', 'userBid'));
     }
 }

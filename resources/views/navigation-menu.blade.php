@@ -75,24 +75,38 @@
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
                             <button class="relative flex items-center text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-0">
-                                <!-- Notification Icon -->
                                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118.6 14.2l-.2-.2a1.99 1.99 0 01-.6-1.6V10a6.003 6.003 0 00-5-5.917V4a2 2 0 10-4 0v.083A6.003 6.003 0 004 10v2.4c0 .38-.213.725-.6 1.2l-.2.2A2.032 2.032 0 013 17h5m0 0v1a3 3 0 006 0v-1m-6 0h6" />
                                 </svg>
-                                <!-- Notification Badge -->
-                                <span class="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+                                @if (Auth::user()->unreadNotifications->count())
+                                    <span class="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+                                @endif
                             </button>
                         </x-slot>
                 
                         <x-slot name="content">
-                            <!-- Notification Dropdown Content -->
                             <div class="py-1">
-                                <p class="text-sm text-center text-white font-medium">No new notifications</p>
+                                @if (Auth::user()->unreadNotifications->isNotEmpty())
+                                @foreach (Auth::user()->unreadNotifications as $notification)
+                                    <div class="px-4 py-2">
+                                        <p class="text-sm text-white-700">A new bid has been placed on your listing.</p>
+                                        <p class="text-sm text-white-700">Bid Amount: ${{ $notification->data['bid_amount'] }}</p>
+                                        <small class="text-sm text-slate-400">{{ $notification->created_at->diffForHumans() }}</small>
+                                    </div>
+                                @endforeach                            
+                                    <div class="border-t border-white-200"></div>
+                                    <form action="{{ route('notifications.markAsRead') }}" method="POST" class="px-4 py-2">
+                                        @csrf
+                                        <button type="submit" class="text-sm text-blue-600 hover:underline">Mark all as read</button>
+                                    </form>
+                                @else
+                                    <p class="text-sm text-center text-gray-500">No new notifications</p>
+                                @endif
                             </div>
                         </x-slot>
                     </x-dropdown>
                 </div>
-                  
+                
                 <!--------------NOTIFICATION---------------->
                 <!-- Settings Dropdown -->
                 <div class="ms-3 relative">
