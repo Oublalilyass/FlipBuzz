@@ -12,6 +12,13 @@
     --button-hover-bg: var(--primary-deep-orange);
     --text-color: var(--white);
 }
+.main-content {
+    margin-left: 250px; /* Ensure main content doesn't overlap */
+    padding: 20px; /* Add some padding */
+    background-color: var(--white); /* Ensure it has a background */
+    color: var(--primary-dark-blue); /* Adjust text color if needed */
+}
+
 /* General Styles */
 .listing-container {
     /* font-family: Arial, sans-serif; */
@@ -24,7 +31,14 @@
     margin: 20px auto;
     color: var(--text-color);
 }
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Remove left margin */
+        padding: 10px; /* Adjust padding */
+    }
 
+    /* Other responsive adjustments if needed */
+}
 .title {
     font-family: 'Poppins', sans-serif;
     font-size: 26px;
