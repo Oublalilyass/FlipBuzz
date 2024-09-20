@@ -255,25 +255,30 @@
             <div class="container py-5 px-lg-5">
                 <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
                     <h5 class="text-primary-gradient fw-medium">How It Works</h5>
-                    <h1 class="mb-5">3 Easy Steps</h1>
+                    <h1 class="mb-5">3 Easy Steps to Get Started with FlipBuzz</h1>
                 </div>
                 <div class="row gy-5 gx-4 justify-content-center">
                     <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
-                                <i class="fa fa-cog fa-3x text-white"></i>
+                                <i class="fa fa-address-card fa-3x text-white"></i>
+
                             </div>
-                            <h5 class="mt-4 mb-3">Install the App</h5>
-                            <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet</p>
+                            <h5 class="mt-4 mb-3">Create Your Account</h5>
+                            <p class="mb-0">Sign up on FlipBuzz in just a few clicks and gain access to 
+                                our marketplace. Whether you're looking to buy or sell an eCommerce business,
+                                 we’ve made the process quick.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
                             <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
-                                <i class="fa fa-address-card fa-3x text-white"></i>
+                                <i class="fa fa-cog fa-3x text-white"></i>
                             </div>
-                            <h5 class="mt-4 mb-3">Setup Your Profile</h5>
-                            <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet</p>
+                            <h5 class="mt-4 mb-3">List or Browse Businesses</h5>
+                            <p class="mb-0">Once your account is set up, list your eCommerce store 
+                                for sale or browse verified listings from sellers.
+                                 Customize your searches to find the right business.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -281,8 +286,11 @@
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
                                 <i class="fa fa-check fa-3x text-white"></i>
                             </div>
-                            <h5 class="mt-4 mb-3">Enjoy The Features</h5>
-                            <p class="mb-0">Tempor erat elitr rebum clita dolor diam ipsum sit diam amet diam eos erat ipsum et lorem et sit sed stet</p>
+                            <h5 class="mt-4 mb-3">Connect and Make Deals</h5>
+                            <p class="mb-0">Negotiate directly with buyers or sellers using our secure 
+                                messaging and bidding system. Complete transactions seamlessly with the 
+                                help of FlipBuzz’s 
+                                tools for evaluation.</p>
                         </div>
                     </div>
                 </div>
@@ -487,8 +495,8 @@
                         <div class="d-flex align-items-center mb-4">
                             <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg" style="width: 85px; height: 85px;">
                             <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
+                                <h5 class="mb-1">Sara ibrahimi</h5>
+                                <p class="mb-1">Online store</p>
                                 <div>
                                     <small class="fa fa-star text-warning"></small>
                                     <small class="fa fa-star text-warning"></small>
@@ -498,14 +506,16 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">Sara runs a successful online clothing store in Morocco. 
+                            She's looking to sell her business to focus on a new project, and she needs
+                             a platform that simplifies the selling process while ensuring her store is valued fairly.</p>
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <div class="d-flex align-items-center mb-4">
                             <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg" style="width: 85px; height: 85px;">
                             <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
+                                <h5 class="mb-1">Ahmed Benjelloun</h5>
+                                <p class="mb-1">Digital Marketer</p>
                                 <div>
                                     <small class="fa fa-star text-warning"></small>
                                     <small class="fa fa-star text-warning"></small>
@@ -515,14 +525,17 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">Ahmed is a digital marketer who wants to invest in eCommerce businesses.
+                            He’s on the lookout for stores with growth potential,
+                             and FlipBuzz’s verified listings and detailed analytics 
+                             help him make informed investment decisions.</p>
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <div class="d-flex align-items-center mb-4">
                             <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg" style="width: 85px; height: 85px;">
                             <div class="ms-4">
-                                <h5 class="mb-1">Client Name</h5>
-                                <p class="mb-1">Profession</p>
+                                <h5 class="mb-1">Yasmine Fikri</h5>
+                                <p class="mb-1">Tech Startup Founder</p>
                                 <div>
                                     <small class="fa fa-star text-warning"></small>
                                     <small class="fa fa-star text-warning"></small>
@@ -532,9 +545,11 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
+                        <p class="mb-0">Yasmine is building a portfolio of online stores and uses FlipBuzz to grow her business empire.
+                             With FlipBuzz’s bidding system, 
+                            she can negotiate deals directly and take advantage of great buying opportunities.</p>
                     </div>
-                    <div class="testimonial-item rounded p-4">
+                    {{-- <div class="testimonial-item rounded p-4">
                         <div class="d-flex align-items-center mb-4">
                             <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg" style="width: 85px; height: 85px;">
                             <div class="ms-4">
@@ -550,7 +565,7 @@
                             </div>
                         </div>
                         <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -567,7 +582,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <div class="wow fadeInUp" data-wow-delay="0.3s">
-                            <p class="text-center mb-4">The contact form is currently inactive. Get a functional and working contact form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and you're done. <a href="https://htmlcodex.com/contact-form">Download Now</a>.</p>
+                            <p class="text-center mb-4"></p>
                             <form>
                                 <div class="row g-3">
                                     <div class="col-md-6">
@@ -613,9 +628,9 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-3">
                         <h4 class="text-white mb-4">Address</h4>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Technopark Casablanca Morocco</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+212655956626</p>
+                        <p><i class="fa fa-envelope me-3"></i>info@FlipBuzz.com</p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -653,10 +668,10 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a class="border-bottom" href="#">FlipBuzz</a>, All Right Reserved. 
 							
 							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>
+							Designed By <a class="border-bottom" href="https://www.linkedin.com/in/ilyass-oublal/">FlipBuzz</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

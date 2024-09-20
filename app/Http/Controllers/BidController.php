@@ -24,6 +24,7 @@ class BidController extends Controller
          //Why this display
         if (Auth::user()->id === $listing->user_id) {
             flash()->warning('You cannot bid on your own listing!');
+            return back();
         }
 
         $bid = new Bid();
@@ -34,13 +35,12 @@ class BidController extends Controller
 
        // Notify the listing owner
        $listing = Listing::find($listingId);
-
        if ($listing && $listing->user) {
-           $listing->user->notify(new BidPlaced($bid));
+            $listing->user->notify(new BidPlaced($bid));
+            flash()->success('Notification sent to the listing owner!');
        } else {
-
         // Redirect to the listings index route with a success message
-        flash()->success('You bid successfully!');
+            flash()->warning('No user found for the listing!');    
        }
         // Redirect to the listings show route with the listingId
         return redirect()->route('listings.show', ['id' => $listingId]);
@@ -56,9 +56,11 @@ class BidController extends Controller
 
     public function show($id)
     {
-    $listing = Listing::findOrFail($id);
-    $userBid = Bid::where('user_id', Auth::id())->where('listing_id', $id)->first();
-    dd($userBid);
-    return view('listings.show', compact('listing', 'userBid'));
+        $listing = Listing::findOrFail($id);
+        $userBid = Bid::where('user_id', Auth::id())
+                       ->where('listing_id', $id)
+                       ->first();
+
+        return view('listings.show', compact('listing', 'userBid'));
     }
 }

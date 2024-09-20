@@ -37,9 +37,9 @@ class BidPlaced extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-                    ->line('A new bid has placed on your listing.')
-                    ->line('Bid Amount: ', $this->bid->amount)
-                    ->action('View Listing: ', url('/listings/'. $this->bid->listing_id))
+                    ->line('A new bid has been placed on your listing.')
+                    ->line('Bid Amount: $' . $this->bid->amount)
+                    ->action('View Listing', url('/listings/' . $this->bid->listing_id))
                     ->line('Thank you for using our application!');
     }
 
@@ -52,7 +52,7 @@ class BidPlaced extends Notification
     {
         return [
             'listing_id' => $this->bid->listing->id,
-            'bid_amount' => $this->bid->bid_amount,
+            'bid_amount' => $this->bid->amount,
             'bidder_id' => $this->bid->user->id,
         ];
     }
