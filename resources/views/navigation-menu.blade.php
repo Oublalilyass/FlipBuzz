@@ -70,7 +70,7 @@
                         </x-dropdown>
                     </div>
                 @endif
-                <!--------------NOTIFICATION---------------->
+                <!--------------OPEN NOTIFICATION---------------->
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -87,13 +87,20 @@
                         <x-slot name="content">
                             <div class="py-1">
                                 @if (Auth::user()->unreadNotifications->isNotEmpty())
-                                @foreach (Auth::user()->unreadNotifications as $notification)
-                                    <div class="px-4 py-2">
-                                        <p class="text-sm text-white-700">A new bid has been placed on your listing.</p>
-                                        <p class="text-sm text-white-700">Bid Amount: ${{ $notification->data['bid_amount'] }}</p>
-                                        <small class="text-sm text-slate-400">{{ $notification->created_at->diffForHumans() }}</small>
-                                    </div>
-                                @endforeach                            
+                                    @foreach (Auth::user()->unreadNotifications as $notification)
+                                        <div class="px-4 py-2">
+                                            @if (isset($notification->data['bid_amount']))
+                                                <p class="text-sm text-white-700">A new bid has been placed on your listing.</p>
+                                                <p class="text-sm text-white-700">Bid Amount: ${{ $notification->data['bid_amount'] }}</p>
+                                            @elseif (isset($notification->data['message_body']))
+                                                <p class="text-sm text-white-700">You have received a new message.</p>
+                                                <p class="text-sm text-white-700">Message: {{ $notification->data['message_body'] }}</p>
+                                            @else
+                                                <p class="text-sm text-white-700">You have a new notification.</p>
+                                            @endif
+                                            <small class="text-sm text-slate-400">{{ $notification->created_at->diffForHumans() }}</small>
+                                        </div>
+                                    @endforeach                            
                                     <div class="border-t border-white-200"></div>
                                     <form action="{{ route('notifications.markAsRead') }}" method="POST" class="px-4 py-2">
                                         @csrf
@@ -107,8 +114,8 @@
                     </x-dropdown>
                 </div>
                 
-                <!--------------NOTIFICATION---------------->
-                <!-- Settings Dropdown -->
+                
+                <!--------------END NOTIFICATION---------------->
                 <div class="ms-3 relative">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -159,6 +166,9 @@
                         </x-slot>
                     </x-dropdown>
                 </div>
+
+
+                
             </div>
 
             <!-- Hamburger -->

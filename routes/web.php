@@ -1,11 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ListingController;
 use App\Http\Controllers\BusinessDetailController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\MessageController;
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,7 +51,11 @@ Route::post('/business-details', [BusinessDetailController::class, 'store']);
 Route::post('/listings/{listing}/bids', [BidController::class, 'store'])->name('bids.store');
 Route::get('/listings/{listing}/bids', [BidController::class, 'index'])->name('bids.index');
 
+//Notifications
 Route::middleware(['auth'])->group(function () {
     Route::get('/notifications', [NotificationController::class, 'showNotifications'])->name('notifications.index');
     Route::post('/notifications/mark-as-read', [NotificationController::class, 'markAsRead'])->name('notifications.markAsRead');
 });
+
+// Message
+Route::post('/listings/{listing}/messages', [MessageController::class, 'sendMessage'])->name('messages.store');

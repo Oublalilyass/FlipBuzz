@@ -105,7 +105,27 @@
                             </ul>
                         @endif
                     </div>
+
+                    <!-- Message Section -->
+                    <div class="message-section mt-8 border-t border-gray ">
+                        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-4">Send a Message to the Owner</h3>
                     
+                        @if (Auth::user()->id !== $listing->user_id)
+                          <form action="{{ route('messages.store', $listing->id) }}" method="POST" class="bg-gray-50 dark:bg-gray-700 p-6 rounded-lg shadow-md">
+                                @csrf
+                                <div class="mb-4">
+                                    <label for="message_body" class="block text-blue-500 font-bold mb-2">Your Message:</label>
+                                    <textarea name="message_body" id="message_body" rows="4" class="w-full p-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..." required></textarea>
+                                </div>
+                                <div class="flex justify-end">
+                                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Send Message</button>
+                                </div>
+                            </form>
+                        @else
+                            <p class="text-gray-500">You cannot message yourself.</p>
+                        @endif
+                    </div>
+                
             </div>
         </div>
     </div>

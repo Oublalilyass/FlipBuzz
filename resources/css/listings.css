@@ -331,7 +331,7 @@ button {
         margin-right: 0;
     }
 }
-/***********************************************/
+/**********************BUTTON*************************/
 
 /* Button Styling */
 .cancel-btn, .submit-btn {
@@ -379,4 +379,46 @@ button {
         width: 100%;
         margin-bottom: 10px; /* Add spacing between buttons for mobile */
     }
+}
+
+
+/*************** Message Section Styling***************/
+
+/* Message Section Styling */
+.message-section {
+    margin: 2rem;
+}
+
+.message-section h3 {
+    color:#1B2D5C;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.message-section form {
+    color: black;
+    background-color: #f9fafb;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.message-section form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    font-size: 1rem;
+}
+
+.message-section form button {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.message-section form button:hover {
+    background-color: #2563eb;
 }
