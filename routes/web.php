@@ -58,4 +58,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 // Message
-Route::post('/listings/{listing}/messages', [MessageController::class, 'sendMessage'])->name('messages.store');
+Route::post('/messages/{listing_id}/{message_id?}', [MessageController::class, 'sendMessage'])->name('messages.send');
+Route::get('/messages/received', [MessageController::class, 'viewReceivedMessages'])->name('messages.received');
+// Route::post('/listings/{listing}/messages', [MessageController::class, 'sendMessage'])->name('messages.store');
+Route::get('/messages/{id}', [MessageController::class, 'show'])->name('messages.show');
