@@ -22,7 +22,7 @@ class ListingController extends Controller
     public function index()
     {
         // Get all listings ordered by creation date
-        $listings = Listing::orderBy('created_at', 'desc')->get();
+        $listings = Listing::where('is_verified', true)->orderBy('created_at', 'desc')->get();
 
          // Limit the description length for each listing
         $listings->map(function ($listing) {
@@ -173,4 +173,35 @@ class ListingController extends Controller
         // Redirect to the listings index route with a success message
         return redirect()->route('listings.index');
     }
+     
+    /**
+     * Mark a listing as verified.
+     *
+     * @param int $id
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function verify($id)
+    {
+    // Only admin can verify
+    $this->authorize('admin'); // Assuming you have an 'admin' role setup
+
+    // Find the listing and update its verified status
+    $listing = Listing::findOrFail($id);
+    $listing->is_verified = true;
+    $listing->save();
+
+    flash()->success('Listing verified successfully!');
+
+    return redirect()->route('listings.index');
+    }
+
+// Add it In listing management page
+//     @if(!$listing->is_verified && auth()->user()->isAdmin()) 
+//     <form action="{{ route('listings.verify', $listing->id) }}" method="POST">
+//         @csrf
+//         @method('PATCH')
+//         <button type="submit" class="btn btn-primary">Verify</button>
+//     </form>
+//     @endif
+
 }

@@ -60,5 +60,9 @@ Route::middleware(['auth'])->group(function () {
 // Message
 Route::post('/messages/{listing_id}/{message_id?}', [MessageController::class, 'sendMessage'])->name('messages.send');
 Route::get('/messages/received', [MessageController::class, 'viewReceivedMessages'])->name('messages.received');
-// Route::post('/listings/{listing}/messages', [MessageController::class, 'sendMessage'])->name('messages.store');
+Route::post('/listings/{listing}/messages', [MessageController::class, 'sendMessage'])->name('messages.store');
 Route::get('/messages/{id}', [MessageController::class, 'show'])->name('messages.show');
+
+//Listing Verification
+Route::patch('/listings/{id}/verify', [ListingController::class, 'verify'])->name('listings.verify');
+
