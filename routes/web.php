@@ -6,7 +6,8 @@ use App\Http\Controllers\BusinessDetailController;
 use App\Http\Controllers\BidController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\MessageController;
-
+use App\Http\Controllers\AdminController;
+use App\Http\Middleware\AdminMiddleware;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,11 @@ Route::middleware([
 ])->group(function () {
     // Update this route to point to the listings index
     Route::get('/dashboard', [ListingController::class, 'index'])->name('dashboard');
+});
+
+Route::middleware([AdminMiddleware::class])->group(function () {
+    // Admin-only routes
+    Route::get('/admin/dashboard', [AdminController::class, 'index']);
 });
 
 Route::get('/landing', function () {

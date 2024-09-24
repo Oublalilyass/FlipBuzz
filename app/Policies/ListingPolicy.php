@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Policies;
 
 use App\Models\Listing;
@@ -12,7 +11,7 @@ class ListingPolicy
      */
     public function viewAny(User $user)
     {
-        //
+        return true; // Or your custom logic
     }
 
     /**
@@ -20,7 +19,7 @@ class ListingPolicy
      */
     public function view(User $user, Listing $listing)
     {
-        //
+        return true; // Or your custom logic
     }
 
     /**
@@ -28,7 +27,7 @@ class ListingPolicy
      */
     public function create(User $user)
     {
-        //
+        return true; // Or your custom logic
     }
 
     /**
@@ -36,8 +35,7 @@ class ListingPolicy
      */
     public function update(User $user, Listing $listing): bool
     {
-         // Only the owner (the one who created the listing) can update it
-         return $user->id === $listing->user_id;
+        return $user->id === $listing->user_id;
     }
 
     /**
@@ -45,8 +43,15 @@ class ListingPolicy
      */
     public function delete(User $user, Listing $listing): bool
     {
-        // Only the owner (the one who created the listing) can delete it
         return $user->id === $listing->user_id;
+    }
+
+    /**
+     * Determine whether the user can verify the listing.
+     */
+    public function verify(User $user): bool
+    {
+        return $user->role === 'admin'; // Check if the user is an admin
     }
 
     /**

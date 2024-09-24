@@ -182,18 +182,18 @@ class ListingController extends Controller
      */
     public function verify($id)
     {
-    // Only admin can verify
-    $this->authorize('admin'); // Assuming you have an 'admin' role setup
-
-    // Find the listing and update its verified status
-    $listing = Listing::findOrFail($id);
-    $listing->is_verified = true;
-    $listing->save();
-
-    flash()->success('Listing verified successfully!');
-
-    return redirect()->route('listings.index');
+        $this->authorize('verify', Listing::class); // Authorize using the 'verify' policy method
+    
+        // Find the listing and update its verified status
+        $listing = Listing::findOrFail($id);
+        $listing->is_verified = true;
+        $listing->save();
+    
+        flash()->success('Listing verified successfully!');
+    
+        return redirect()->route('listings.index');
     }
+    
 
 // Add it In listing management page
 //     @if(!$listing->is_verified && auth()->user()->isAdmin()) 
