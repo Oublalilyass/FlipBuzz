@@ -232,6 +232,9 @@ button {
     font-size: 0.9rem;
     color: #888; /* Neutral gray for date */
 }
+.message-bg{
+    background-color: var(--primary-dark-blue);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -398,41 +401,31 @@ button {
 
 /*************** Message Section Styling***************/
 
-/* Message Section Styling */
-.message-section {
-    margin: 2rem;
+.table-wrapper {
+    margin: 0 auto; /* Centers the table */
+    max-width: 100%;
+    padding: 2rem; /* Adds padding around the table */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
 
-.message-section h3 {
-    color:#1B2D5C;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+/* Table Styling (General) */
+table {
+    width: 100%; /* Ensures table takes up full available width */
+    border-collapse: collapse; /* Ensures no spacing between table borders */
 }
 
-.message-section form {
-    color: black;
-    background-color: #f9fafb;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+thead th {
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #1B2D5C;
+    text-align: left;
 }
 
-.message-section form textarea {
-    width: 100%;
+tbody td {
     padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid #e5e7eb;
-    font-size: 1rem;
 }
 
-.message-section form button {
-    background-color: #3b82f6;
-    color: white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 0.5rem;
-    transition: background-color 0.3s;
-}
-
-.message-section form button:hover {
-    background-color: #2563eb;
-}
+/* Row background colors */
+.bg-green-100 { background-color: #d1fae5; } /* Verified listings */
+.bg-red-100 { background-color: #fee2e2; } /* Pending listings */

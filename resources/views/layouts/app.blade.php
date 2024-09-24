@@ -27,13 +27,13 @@
 
         @livewire('navigation-menu')
         <!-- Page Layout: Sidebar + Content -->
-        <div class="layout flex">
+        {{-- <div class="layout flex"> --}}
             <!-- Sidebar -->
-            @include('listings.sidebar')
+            {{-- @include('listings.sidebar') --}}
 
             <!-- Main Content -->
-            <div class="main-content flex-grow">
-                @yield('content')
+            {{-- <div class="main-content flex-grow">
+                @yield('content') --}}
 
                 <!-- Page Heading -->
                 {{-- @if (isset($header))
@@ -48,7 +48,7 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
+        {{-- </div> --}}
 
         @stack('modals')
 

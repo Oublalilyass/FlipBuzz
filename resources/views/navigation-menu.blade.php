@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="navbar bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700">
+<nav x-data="{ open: false }" >
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -10,12 +10,12 @@
                     </a>
                 </div>
                 <!-- Navigation Links -->
-                <!-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-            </div> -->
+                </div> 
 
                 <div class="hidden sm:flex sm:items-center sm:ms-6">
                     <!-- Teams Dropdown -->
@@ -40,7 +40,12 @@
                                     <div class="block px-4 py-2 text-xs text-gray-400">
                                         {{ __('Manage Team') }}
                                     </div>
-                                    
+
+                                     <!-- Messages -->
+                                     <x-dropdown-link href="{{ route('admin.dashboard') }}">
+                                        {{ __('Verification List') }}
+                                     </x-dropdown-link>
+                                      
                                     <!-- Messages -->
                                     <x-dropdown-link href="{{ route('messages.received', Auth::user()->currentTeam->id) }}">
                                            {{ __('Messages') }}
@@ -268,7 +273,7 @@
             </div>
         </div>
 </nav>
-<style>
+{{-- <style>
     /* Add this CSS to your styles */
     .navbar {
         margin-left: 250px;
@@ -280,4 +285,4 @@
         z-index: 10;
         /* Ensure it appears above other elements */
     }
-</style>
+</style> --}}
