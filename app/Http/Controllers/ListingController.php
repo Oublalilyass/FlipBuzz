@@ -51,9 +51,9 @@ class ListingController extends Controller
      */
     public function store(ListingRequest $request)
     {
+       
         // Validate the incoming request
         $validated = $request->all();
-    
         // Handle image upload
         if ($request->hasFile('images')) {
             // Check if the file was uploaded successfully
@@ -67,7 +67,7 @@ class ListingController extends Controller
     
         // Create a new listing with the updated validated data
         Listing::create($validated);
-
+     
         flash()->success('Listing created successfully!');
     
         // Redirect to the listings index route with a success message
@@ -118,7 +118,7 @@ class ListingController extends Controller
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(ListingRequest $request, Listing $listing)
-{
+    {
     // Authorization check
     $this->authorize('update', $listing);
 

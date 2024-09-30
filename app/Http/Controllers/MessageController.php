@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Notifications\NewMessageNotification;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,19 +28,22 @@ class MessageController extends Controller
 
     public function sendMessage(Request $request, $listing_id, $message_id = null)
     {
+        // Validate the incoming request
         $request->validate([
             'message_body' => 'required',
         ]);
     
-        // Find the listing
-        $listing = Listing::find($listing_id);
+        try {
+            // Find the listing or throw a 404 error if not found
+            $listing = Listing::findOrFail($listing_id);
     
-        if ($listing && $listing->user) {
-            // If replying, find the original message
-            $receiver_id = $listing->user_id;
-            $parent_id = null;
+            // Initialize variables
+            $receiver_id = $listing->user_id; // Default to the listing owner
+            $parent_id = null; // Default to no parent message
     
+            // If a reply is being sent (message_id is provided)
             if ($message_id) {
+                // Find the original message or throw 404 if not found
                 $originalMessage = Message::findOrFail($message_id);
                 $receiver_id = $originalMessage->sender_id; // Reply to the original sender
                 $parent_id = $originalMessage->id; // Set parent_id to the original message's id
@@ -55,24 +59,27 @@ class MessageController extends Controller
                 'parent_id' => $parent_id, // Set parent ID if it's a reply
             ]);
     
-            // Notify the listing owner or the original sender
+            // Notify the appropriate user
             if ($message_id) {
+                // Notify the original sender that they've received a reply
                 $originalMessage->sender->notify(new NewMessageNotification($message));
             } else {
+                // Notify the listing owner that they've received a new message
                 $listing->user->notify(new NewMessageNotification($message));
             }
     
-            // Add a success flash message
+            // Flash success message
             flash()->success('Message sent successfully!');
-        } else {
-            flash()->warning('No user found for the listing!');
+    
+            // Redirect to the listing page
+            return redirect()->route('listings.index');
+        } catch (ModelNotFoundException $e) {
+            // Handle the 404 exception for missing listing or message
+            flash()->error('Listing or message not found!');
+            return redirect()->back();
         }
-    
-        // Redirect back to the appropriate page
-        return redirect()->route('messages.show', $message_id ? $originalMessage->id : $listing_id);
     }
-    
-    
+      
    
     // Method to view received messages
     public function viewReceivedMessages() {

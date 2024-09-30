@@ -5,12 +5,14 @@
         </h2>
     </x-slot>
 
-    {{-- @foreach (auth()->user()->unreadNotifications as $notification)
+    @foreach (auth()->user()->unreadNotifications as $notification)
+    @if (isset($notification->data['bid_amount']))  <!-- Check if 'bid_amount' key exists -->
     <div>
         A new bid of ${{ $notification->data['bid_amount'] }} was placed on your listing.
         <a href="{{ url('/listings/' . $notification->data['listing_id']) }}">View Listing</a>
     </div>
-    @endforeach --}}
+    @endif
+@endforeach
     
     {{-- Include the shared CSS file --}}
     @vite(['resources/css/listings.css'])

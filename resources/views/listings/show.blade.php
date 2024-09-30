@@ -120,7 +120,7 @@
                             @csrf
                             <div class="mb-4">
                                 <label for="message_body" class="block text-white font-bold mb-2">Your Message:</label>
-                                <textarea name="message_body" id="message_body" rows="4" class="w-full p-3 border border-black-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..." required></textarea>
+                                <textarea name="message_body" id="message_body" rows="4" class="w-full text-black p-3 border border-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Type your message here..." required></textarea>
                             </div>
                             <div class="flex justify-end">
                                 <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">Send Message</button>
@@ -128,7 +128,7 @@
                         </form>
                         @else
                         <p class="text-gray-500">You cannot message yourself.</p>
-                        @endif
+                      @endif
                     </div>
 
                 </div>

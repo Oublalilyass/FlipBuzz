@@ -15,36 +15,37 @@ class BidController extends Controller
         $this->validate($request, [
             'amount' =>'required|numeric|min:1',
         ]);
-
+    
         $listing = Listing::find($listingId);
-
+    
         if (!$listing) {
-            flash()->warning('Listing not found!');
-        }
-         //Why this display
-        if (Auth::user()->id === $listing->user_id) {
-            flash()->warning('You cannot bid on your own listing!');
+            flash()->warning('The listing you are trying to bid on does not exist.');
             return back();
         }
-
+    
+        if (Auth::user()->id === $listing->user_id) {
+            flash()->warning('You cannot place a bid on your own listing.');
+            return back();
+        }
+    
+        // Create and save the bid
         $bid = new Bid();
         $bid->listing_id = $listingId;
         $bid->user_id = Auth::user()->id;
         $bid->amount = $request->amount;
         $bid->save();
-
-       // Notify the listing owner
-       $listing = Listing::find($listingId);
-       if ($listing && $listing->user) {
+    
+        // Notify the listing owner
+        if ($listing->user) {
             $listing->user->notify(new BidPlaced($bid));
-            flash()->success('Notification sent to the listing owner!');
-       } else {
-        // Redirect to the listings index route with a success message
-            flash()->warning('No user found for the listing!');    
-       }
+            flash()->success('Bid placed successfully, and notification sent to the listing owner!');
+        } else {
+            flash()->warning('No user found for the listing.');
+        }
+    
         // Redirect to the listings show route with the listingId
         return redirect()->route('listings.show', ['id' => $listingId]);
-    }
+    }    
 
     public function index($listingId)
     {

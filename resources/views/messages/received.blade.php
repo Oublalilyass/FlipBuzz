@@ -27,6 +27,8 @@
                             
                             <!-- Conditionally apply dark gray background if message has replies -->
                             <li>
+                                {{-- {{dd(Auth::id(), $message->sender_id, $message->receiver_id);}} --}}
+                                
                                 <a href="{{ route('messages.show', $message->id) }}" 
                                     class="block hover:bg-white hover:text-black {{ $hasReplies ? 'bg-gray-800 text-white' : 'bg-white text-black' }} transition duration-300">
                                     <div class="flex items-center px-4 py-4 sm:px-6">
