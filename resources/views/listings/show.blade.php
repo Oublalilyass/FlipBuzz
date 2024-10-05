@@ -1,3 +1,6 @@
+{{-- @include('listings.sidebar') --}}
+
+
 <x-app-layout>
 
     <x-slot name="header">
