@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -50,7 +50,7 @@
             <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand p-0">
                     {{-- <h1 class="m-0">FlipBuzz</h1> --}}
-                   <img src="images/flipbuzz-logo.png" alt="Logo">
+                    <img src="images/flipbuzz-logo.png" alt="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="fa fa-bars"></span>
@@ -74,17 +74,17 @@
                     <div class="row g-5">
                         <div class="col-lg-8 text-center text-lg-start">
                             <h1 class="text-white mb-4 animated slideInDown" style="font-style: italic"><span class="FlipBuzz">FlipBuzz</span> Is The First <span class="FlipBuzz">Marketplace</span> To Buy <span class="FlipBuzz">&</span> Sell Online Store</h1>
-                            <p class="text-white pb-3 animated slideInDown"  style="font-style: italic">FlipBuzz : Where eCommerce Meets Opportunity</p>
+                            <p class="text-white pb-3 animated slideInDown" style="font-style: italic">FlipBuzz : Where eCommerce Meets Opportunity</p>
                             <a href="" class="btn btn-primary-gradient-login py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read More</a>
-                            <a href="#contact"  class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
+                            <a href="#contact" class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
                         </div>
                         <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
                             <div class="owl-carousel screenshot-carousel">
-                                <img class="img-fluid" src="img/screenshot-1.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-2.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-3.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-4.png" alt="">
-                                <img class="img-fluid" src="img/screenshot-5.png" alt="">
+                                <img class="img-fluid" src="img/shop-screenshot-5.png" alt="">
+                                <img class="img-fluid" src="img/shop-screenshot-2.png" alt="">
+                                <img class="img-fluid" src="img/shop-screenshot-4.png" alt="">
+                                <img class="img-fluid" src="img/shop-screenshot-3.png" alt="">
+                                <img class="img-fluid" src="img/shop-screenshot-1.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -102,11 +102,11 @@
                         <h5 class="text-primary-gradient-flip fw-medium">About App</h5>
                         <h1 class="mb-4">#1 Marketplace to Buy & Sell eCommerce Stores</h1>
                         <p class="mb-4">
-                            At FlipBuzz, we make buying and selling online businesses simple and secure. 
+                            At FlipBuzz, we make buying and selling online businesses simple and secure.
                             Whether you're an entrepreneur looking to sell your store or a buyer seeking to
-                             invest in a new eCommerce venture, FlipBuzz provides you with all the tools you need.
-                              From verified listings to expert evaluations, we offer transparency and support to
-                               help you make the best decisions.
+                            invest in a new eCommerce venture, FlipBuzz provides you with all the tools you need.
+                            From verified listings to expert evaluations, we offer transparency and support to
+                            help you make the best decisions.
 
                             Join the thousands of entrepreneurs who trust FlipBuzz to help them grow and transition their online businesses.
                         <div class="row g-4 mb-4">
@@ -132,7 +132,7 @@
                         <a href="" class="btn btn-primary-gradient-login py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about-screen.png">
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@
                                 <i class="fa fa-eye text-white fs-4"></i>
                             </div>
                             <h5 class="text-primary-gradient-flip">Verified Listings</h5>
-                            <p class="m-0">All listings on FlipBuzz are thoroughly vetted and verified. 
+                            <p class="m-0">All listings on FlipBuzz are thoroughly vetted and verified.
                                 This ensures that you’re only browsing legitimate, high-quality eCommerce opportunities.</p>
                         </div>
                     </div>
@@ -164,11 +164,11 @@
                                 <i class="fa fa-layer-group text-white fs-4"></i>
                             </div>
                             <h5 class="text-primary-gradient-flip">Advanced Search Filters</h5>
-                            <p class="m-0">Easily filter listings by industry, revenue, and more. 
+                            <p class="m-0">Easily filter listings by industry, revenue, and more.
                                 FlipBuzz’s advanced filters help you find exactly what you’re looking for quickly and efficiently.</p>
                         </div>
                     </div>
-            
+
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="feature-item bg-light rounded p-4">
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
@@ -176,7 +176,7 @@
                             </div>
                             <h5 class="text-primary-gradient-flip">In-Depth Analytics</h5>
                             <p class="m-0">Get comprehensive business insights before making a decision.
-                                 FlipBuzz provides detailed analytics on traffic, revenue, and customer engagement.</p>
+                                FlipBuzz provides detailed analytics on traffic, revenue, and customer engagement.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -188,15 +188,15 @@
                             <p class="m-0">Gain access to expert advice and guidance throughout the buying or selling process to help you make informed choices.</p>
                         </div>
                     </div>
-        
+
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="feature-item bg-light rounded p-4">
                             <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4" style="width: 60px; height: 60px;">
                                 <i class="fa fa-edit text-white fs-4"></i>
                             </div>
                             <h5 class="text-primary-gradient-flip">Mobile-Friendly</h5>
-                            <p class="m-0">FlipBuzz is fully optimized for all devices, 
-                                ensuring a seamless browsing experience whether you're using a desktop, 
+                            <p class="m-0">FlipBuzz is fully optimized for all devices,
+                                ensuring a seamless browsing experience whether you're using a desktop,
                                 tablet, or smartphone.</p>
                         </div>
                     </div>
@@ -207,8 +207,8 @@
                                 <i class="fa fa-mobile-alt text-white fs-4"></i>
                             </div>
                             <h5 class="text-primary-gradient-flip">Mobile-Friendly</h5>
-                            <p class="m-0">FlipBuzz is fully optimized for all devices, 
-                                ensuring a seamless browsing experience whether you're using a desktop, 
+                            <p class="m-0">FlipBuzz is fully optimized for all devices,
+                                ensuring a seamless browsing experience whether you're using a desktop,
                                 tablet, or smartphone.</p>
                         </div>
                     </div>
@@ -226,9 +226,9 @@
                         <h5 class="text-primary-gradient-flip fw-medium">Screenshot</h5>
                         <h1 class="mb-4">User-Friendly Interface and Easy-to-Use Marketplace
                         </h1>
-                        <p class="mb-4">FlipBuzz offers a simple and intuitive interface, 
-                            making it easy for users to browse, buy, and sell online stores. 
-                            Whether you’re an experienced entrepreneur or a first-time buyer, 
+                        <p class="mb-4">FlipBuzz offers a simple and intuitive interface,
+                            making it easy for users to browse, buy, and sell online stores.
+                            Whether you’re an experienced entrepreneur or a first-time buyer,
                             FlipBuzz provides a seamless experience.</p>
                         <p><i class="fa fa-check text-primary-gradient me-3"></i>Effortless navigation and clean design</p>
                         <p><i class="fa fa-check text-primary-gradient me-3"></i>Easy-to-list stores with clear guidelines</p>
@@ -237,11 +237,11 @@
                     </div>
                     <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp" data-wow-delay="0.3s">
                         <div class="owl-carousel screenshot-carousel">
-                            <img class="img-fluid" src="img/screenshot-1.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-2.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-3.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-4.png" alt="">
-                            <img class="img-fluid" src="img/screenshot-5.png" alt="">
+                            <img class="img-fluid" src="img/shop-screenshot-5.png" alt="">
+                            <img class="img-fluid" src="img/shop-screenshot-2.png" alt="">
+                            <img class="img-fluid" src="img/shop-screenshot-4.png" alt="">
+                            <img class="img-fluid" src="img/shop-screenshot-3.png" alt="">
+                            <img class="img-fluid" src="img/shop-screenshot-1.png" alt="">
                         </div>
                     </div>
                 </div>
@@ -265,9 +265,9 @@
 
                             </div>
                             <h5 class="mt-4 mb-3">Create Your Account</h5>
-                            <p class="mb-0">Sign up on FlipBuzz in just a few clicks and gain access to 
+                            <p class="mb-0">Sign up on FlipBuzz in just a few clicks and gain access to
                                 our marketplace. Whether you're looking to buy or sell an eCommerce business,
-                                 we’ve made the process quick.</p>
+                                we’ve made the process quick.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
@@ -276,9 +276,9 @@
                                 <i class="fa fa-cog fa-3x text-white"></i>
                             </div>
                             <h5 class="mt-4 mb-3">List or Browse Businesses</h5>
-                            <p class="mb-0">Once your account is set up, list your eCommerce store 
+                            <p class="mb-0">Once your account is set up, list your eCommerce store
                                 for sale or browse verified listings from sellers.
-                                 Customize your searches to find the right business.</p>
+                                Customize your searches to find the right business.</p>
                         </div>
                     </div>
                     <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
@@ -287,9 +287,9 @@
                                 <i class="fa fa-check fa-3x text-white"></i>
                             </div>
                             <h5 class="mt-4 mb-3">Connect and Make Deals</h5>
-                            <p class="mb-0">Negotiate directly with buyers or sellers using our secure 
-                                messaging and bidding system. Complete transactions seamlessly with the 
-                                help of FlipBuzz’s 
+                            <p class="mb-0">Negotiate directly with buyers or sellers using our secure
+                                messaging and bidding system. Complete transactions seamlessly with the
+                                help of FlipBuzz’s
                                 tools for evaluation.</p>
                         </div>
                     </div>
@@ -367,10 +367,10 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>14.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>List up to 5 eCommerce stores </span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Basic analytics</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Secure transaction support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
@@ -386,10 +386,12 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>24.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>List up to 15 eCommerce stores</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Detailed analytics</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Secure transaction support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Priority email notifications</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Dedicated support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="" class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
@@ -405,10 +407,13 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>34.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Month</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Unlimited listings</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Advanced analytics & insights</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Instant notifications</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Premium customer support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Personalized consultations</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
@@ -428,10 +433,10 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>114.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>List up to 5 eCommerce stores </span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Basic analytics</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Secure transaction support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
@@ -447,11 +452,13 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>124.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
+                                            <div class="d-flex justify-content-between mb-3"><span>List up to 15 eCommerce stores</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Detailed analytics</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Secure transaction support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Priority email notifications</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Dedicated support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="" class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
                                 </div>
@@ -466,10 +473,13 @@
                                                 <small class="align-top" style="font-size: 22px; line-height: 45px;">$</small>134.99<small
                                                     class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Yearly</small>
                                             </h1>
-                                            <div class="d-flex justify-content-between mb-3"><span>HTML5 & CSS3</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-3"><span>Bootstrap v5</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Unlimited listings</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Access to verified buyers</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <div class="d-flex justify-content-between mb-3"><span>Responsive Layout</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
-                                            <div class="d-flex justify-content-between mb-2"><span>Cross-browser Support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Advanced analytics & insights</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Instant notifications</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Premium customer support</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Personalized consultations</span><i class="fa fa-check text-primary-gradient pt-1"></i></div>
                                             <a href="" class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get Started</a>
                                         </div>
                                     </div>
@@ -506,9 +516,9 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="mb-0">Sara runs a successful online clothing store in Morocco. 
+                        <p class="mb-0">Sara runs a successful online clothing store in Morocco.
                             She's looking to sell her business to focus on a new project, and she needs
-                             a platform that simplifies the selling process while ensuring her store is valued fairly.</p>
+                            a platform that simplifies the selling process while ensuring her store is valued fairly.</p>
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <div class="d-flex align-items-center mb-4">
@@ -527,8 +537,8 @@
                         </div>
                         <p class="mb-0">Ahmed is a digital marketer who wants to invest in eCommerce businesses.
                             He’s on the lookout for stores with growth potential,
-                             and FlipBuzz’s verified listings and detailed analytics 
-                             help him make informed investment decisions.</p>
+                            and FlipBuzz’s verified listings and detailed analytics
+                            help him make informed investment decisions.</p>
                     </div>
                     <div class="testimonial-item rounded p-4">
                         <div class="d-flex align-items-center mb-4">
@@ -546,7 +556,7 @@
                             </div>
                         </div>
                         <p class="mb-0">Yasmine is building a portfolio of online stores and uses FlipBuzz to grow her business empire.
-                             With FlipBuzz’s bidding system, 
+                            With FlipBuzz’s bidding system,
                             she can negotiate deals directly and take advantage of great buying opportunities.</p>
                     </div>
                     {{-- <div class="testimonial-item rounded p-4">
@@ -620,7 +630,7 @@
             </div>
         </div>
         <!-- Contact End -->
-        
+
 
         <!-- Footer Start -->
         <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
@@ -668,10 +678,10 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">FlipBuzz</a>, All Right Reserved. 
-							
-							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							Designed By <a class="border-bottom" href="https://www.linkedin.com/in/ilyass-oublal/">FlipBuzz</a>
+                            &copy; <a class="border-bottom" href="#">FlipBuzz</a>, All Right Reserved.
+
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a class="border-bottom" href="https://www.linkedin.com/in/ilyass-oublal/">FlipBuzz</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">

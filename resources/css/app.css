@@ -11,9 +11,10 @@
     font-size: inherit;
     font-weight: inherit;
 } */
+ 
 
 .block {
-    display: block;
+    display:block;
 }
 
 button{

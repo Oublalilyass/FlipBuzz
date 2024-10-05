@@ -320,8 +320,8 @@
     /* this media query for medium screens (max-width: 768px) */
     @media (max-width: 768px) {
         .sidebar {
-            width: 70px;
-            padding: 6px 12px;
+            width: 60px;
+            padding: 4px 8px;
         }
 
         .sidebar .logo-details {
@@ -354,5 +354,14 @@
             font-size: 20px;
 
         }
+    }
+
+    .sidebar:not(.open) .logo-details {
+        height: 40px;
+    }
+
+    .sidebar:not(.open) .logo-details img {
+        height: 40px;
+        width: auto;
     }
 </style>
